@@ -11,13 +11,16 @@
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6; /* Light gray background */
         }
+        .container {
+            max-width: 1200px; /* Max width for larger screens */
+        }
         .table-container {
             overflow-x: auto; /* Enable horizontal scrolling for small screens */
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 1000px; /* Ensure table is wide enough for content, will scale for print */
+            min-width: 1100px; /* Increased min-width to accommodate wider columns */
             table-layout: fixed; /* Fix table layout to distribute column widths */
         }
         th, td {
@@ -47,10 +50,10 @@
                 padding: 1rem;
             }
             table {
-                font-size: 0.8rem; /* Smaller font on small screens */
+                font-size: 0.75rem; /* Smaller font on small screens */
             }
             th, td {
-                padding: 6px; /* Further reduced padding on very small screens */
+                padding: 5px; /* Further reduced padding on very small screens */
             }
             .section-title {
                 font-size: 1.5rem; /* Adjust title size for mobile */
@@ -63,27 +66,31 @@
                 background-color: #ffffff; /* White background for print */
                 -webkit-print-color-adjust: exact; /* Ensure background colors are printed */
                 color-adjust: exact;
+                margin: 0; /* Remove default print margins */
+                padding: 0;
             }
             .container {
                 box-shadow: none; /* Remove shadow for print */
                 padding: 0; /* Remove padding for print to maximize content area */
+                margin: 0;
+                width: 100%; /* Ensure container takes full width of print area */
             }
             table {
                 min-width: unset; /* Allow browser to scale table freely for print */
                 width: 100%; /* Ensure it takes full width of print area */
-                font-size: 9pt; /* Adjust font size for print readability */
+                font-size: 8pt; /* Adjust font size for print readability */
             }
             th, td {
-                padding: 5px; /* Compact padding for print */
+                padding: 4px; /* Compact padding for print */
                 border: 0.5px solid #ccc; /* Lighter border for print */
             }
             .section-title {
                 border-bottom: 1px solid #ccc;
-                font-size: 14pt;
-                margin-bottom: 10px;
+                font-size: 12pt;
+                margin-bottom: 8px;
             }
-            h2, h3, p {
-                font-size: 10pt; /* Adjust general text size for print */
+            h2, h3, p, ul, ol {
+                font-size: 9pt; /* Adjust general text size for print */
             }
         }
     </style>
@@ -96,7 +103,7 @@
             <p class="text-gray-700 mb-2"><span class="font-semibold">Nama:</span> Suriansyah, S. Kep., Ners</p>
             <p class="text-gray-700 mb-2"><span class="font-semibold">NDH:</span> 07</p>
             <p class="text-gray-700 mb-2"><span class="font-semibold">Kelompok:</span> 1</p>
-            <p class="text-gray-700 mb-2"><span class="font-semibold">Angkatan:</span> 7</p>
+            <p class="text-700 mb-2"><span class="font-semibold">Angkatan:</span> 7</p>
         </div>
 
         <hr class="my-6 border-gray-300">
@@ -123,15 +130,15 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 5%;">NO.</th>
-                        <th style="width: 15%;">KEGIATAN</th>
-                        <th style="width: 20%;">TAHAPAN KEGIATAN</th>
-                        <th style="width: 15%;">OUTPUT/HASIL</th>
-                        <th style="width: 20%;">KETERKAITAN DENGAN MP AGENDA 2</th>
+                        <th style="width: 4%;">NO.</th>
+                        <th style="width: 14%;">KEGIATAN</th>
+                        <th style="width: 18%;">TAHAPAN KEGIATAN</th>
+                        <th style="width: 14%;">OUTPUT/HASIL</th>
+                        <th style="width: 22%;">KETERKAITAN DENGAN MP AGENDA 2</th>
                         <th style="width: 10%;">KONTRIBUSI TERHADAP VISI MISI ORGANISASI</th>
-                        <th style="width: 5%;">PIHAK TERKAIT</th>
-                        <th style="width: 5%;">POTENSI KONFLIK (YA/TIDAK)</th>
-                        <th style="width: 5%;">SOLUSI JIKA ADA KONFLIK</th>
+                        <th style="width: 6%;">PIHAK TERKAIT</th>
+                        <th style="width: 6%;">POTENSI KONFLIK (YA/TIDAK)</th>
+                        <th style="width: 6%;">SOLUSI JIKA ADA KONFLIK</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -154,13 +161,13 @@
                             </ul>
                         </td>
                         <td>
-                            <p><strong class="text-gray-900">Berorientasi Pelayanan:</strong> Saya akan proaktif dalam menjalin komunikasi dengan mentor untuk menyusun program pelayanan yang berfokus pada perbaikan.</p>
-                            <p><strong class="text-gray-900">Akuntabel:</strong> Saya akan melaksanakan janji temu dengan tepat waktu dan bertanggung jawab atas setiap masukan yang diberikan.</p>
-                            <p><strong class="text-gray-900">Kompeten:</strong> Saya akan terus belajar dan meningkatkan wawasan melalui arahan mentor untuk perbaikan rencana kegiatan.</p>
-                            <p><strong class="text-gray-900">Harmonis:</strong> Saya akan menciptakan suasana konsultasi yang saling menghargai dan mendukung.</p>
-                            <p><strong class="text-gray-900">Loyal:</strong> Saya akan menunjukkan komitmen terhadap arahan mentor demi keberhasilan aktualisasi.</p>
-                            <p><strong class="text-gray-900">Adaptif:</strong> Saya akan mampu menyesuaikan rencana berdasarkan saran dan kondisi yang ada.</p>
-                            <p><strong class="text-gray-900">Kolaboratif:</strong> Saya akan bekerja sama secara aktif dengan mentor dalam perumusan rencana.</p>
+                            <p><strong class="text-gray-900">Berorientasi Pelayanan:</strong> Saat *menghubungi mentor dan melaksanakan konsultasi*, saya akan proaktif dalam menjalin komunikasi untuk menyusun program pelayanan yang berfokus pada perbaikan.</p>
+                            <p><strong class="text-gray-900">Akuntabel:</strong> Ketika *melaksanakan janji temu*, saya akan tepat waktu dan bertanggung jawab atas setiap masukan yang diberikan.</p>
+                            <p><strong class="text-gray-900">Kompeten:</strong> Dalam *proses konsultasi dan penyusunan rancangan*, saya akan terus belajar dan meningkatkan wawasan melalui arahan mentor.</p>
+                            <p><strong class="text-gray-900">Harmonis:</strong> Selama *pertemuan konsultasi*, saya akan menciptakan suasana yang saling menghargai dan mendukung.</p>
+                            <p><strong class="text-gray-900">Loyal:</strong> Pada *setiap tahapan konsultasi*, saya akan menunjukkan komitmen terhadap arahan mentor demi keberhasilan aktualisasi.</p>
+                            <p><strong class="text-gray-900">Adaptif:</strong> Saat *menerima saran dan merevisi rancangan*, saya akan mampu menyesuaikan rencana berdasarkan kondisi yang ada.</p>
+                            <p><strong class="text-gray-900">Kolaboratif:</strong> Dalam *seluruh proses konsultasi dan penyusunan*, saya akan bekerja sama secara aktif dengan mentor dalam perumusan rencana.</p>
                         </td>
                         <td>Terlaksananya koordinasi yang baik antar pegawai dan pimpinan, mendukung terwujudnya tata kelola organisasi yang efektif dan efisien.</td>
                         <td>Mentor, Pimpinan</td>
@@ -176,7 +183,7 @@
                             <ul class="list-disc list-inside space-y-1">
                                 <li>Melakukan studi literatur (Evidence-Based Practice/EBP) untuk mengumpulkan bahan konten poster dan SOP.</li>
                                 <li>Mendesain draf visual poster edukasi yang informatif dan menarik, serta menulis naskah SOP yang jelas dan mudah dipahami.</li>
-                                <li>Meminta validasi konten (desain poster dan naskah SOP) kepada mentor dan tim terkait, lalu melakukan revisi berdasarkan masukan.</li>
+                                3. Meminta validasi konten (desain poster dan naskah SOP) kepada mentor dan tim terkait, lalu melakukan revisi berdasarkan masukan.
                                 <li>Mencetak poster edukasi dan melakukan finalisasi serta publikasi dokumen SOP.</li>
                             </ul>
                         </td>
@@ -190,13 +197,13 @@
                             </ul>
                         </td>
                         <td>
-                            <p><strong class="text-gray-900">Berorientasi Pelayanan:</strong> Saya akan menyediakan media edukasi yang mudah diakses dan informatif bagi pasien.</p>
-                            <p><strong class="text-gray-900">Akuntabel:</strong> Saya akan menyusun konten berdasarkan bukti ilmiah (EBP) dan validasi, serta memastikan proses produksi berjalan efisien.</p>
-                            <p><strong class="text-gray-900">Kompeten:</strong> Saya akan meningkatkan keahlian dalam menyusun media edukasi yang efektif dan berkualitas.</p>
-                            <p><strong class="text-gray-900">Harmonis:</strong> Saya akan membangun hubungan baik dengan mentor dan tim selama proses validasi.</p>
-                            <p><strong class="text-gray-900">Loyal:</strong> Saya akan berdedikasi dalam menghasilkan media yang berkualitas untuk mendukung pelayanan.</p>
-                            <p><strong class="text-gray-900">Adaptif:</strong> Saya akan mampu menyesuaikan desain dan isi media berdasarkan masukan dan kebutuhan target audiens.</p>
-                            <p><strong class="text-gray-900">Kolaboratif:</strong> Saya akan bekerja sama dengan mentor dan tim terkait dalam pengembangan dan penyempurnaan media.</p>
+                            <p><strong class="text-gray-900">Berorientasi Pelayanan:</strong> Saat *mendesain dan memproduksi media*, saya akan menyediakan media edukasi yang mudah diakses dan informatif bagi pasien.</p>
+                            <p><strong class="text-gray-900">Akuntabel:</strong> Ketika *melakukan studi literatur dan validasi*, saya akan menyusun konten berdasarkan bukti ilmiah (EBP) dan memastikan proses produksi berjalan efisien.</p>
+                            <p><strong class="text-gray-900">Kompeten:</strong> Dalam *proses penyusunan dan revisi media*, saya akan meningkatkan keahlian dalam membuat media edukasi yang efektif dan berkualitas.</p>
+                            <p><strong class="text-gray-900">Harmonis:</strong> Selama *validasi konten dengan mentor dan tim*, saya akan membangun hubungan baik dan kolaboratif.</p>
+                            <p><strong class="text-gray-900">Loyal:</strong> Pada *setiap tahapan penyusunan media*, saya akan berdedikasi dalam menghasilkan media yang berkualitas untuk mendukung pelayanan.</p>
+                            <p><strong class="text-gray-900">Adaptif:</strong> Saat *menerima masukan dan merevisi desain*, saya akan mampu menyesuaikan media berdasarkan kebutuhan target audiens.</p>
+                            <p><strong class="text-gray-900">Kolaboratif:</strong> Dalam *seluruh proses pengembangan media*, saya akan bekerja sama dengan mentor dan tim terkait untuk penyempurnaan.</p>
                         </td>
                         <td>Peningkatan kualitas pelayanan keperawatan melalui penyediaan informasi yang akurat dan berkualitas. <br> Memastikan setiap konten dapat dipertanggungjawabkan secara ilmiah.</td>
                         <td>Mentor, Tim PKRS, Perawat Pelaksana</td>
@@ -227,13 +234,13 @@
                             </ul>
                         </td>
                         <td>
-                            <p><strong class="text-gray-900">Berorientasi Pelayanan:</strong> Saya akan memberikan edukasi yang jelas dan pendampingan intensif untuk pasien dan keluarga.</p>
-                            <p><strong class="text-gray-900">Akuntabel:</strong> Saya akan melaksanakan program sesuai SOP dan standar yang ditetapkan.</p>
-                            <p><strong class="text-gray-900">Kompeten:</strong> Saya akan menerapkan pengetahuan dan keterampilan dalam edukasi dan pendampingan mobilisasi dini.</p>
-                            <p><strong class="text-gray-900">Harmonis:</strong> Saya akan menciptakan suasana nyaman dan saling mendukung antara perawat, pasien, dan keluarga.</p>
-                            <p><strong class="text-gray-900">Loyal:</strong> Saya akan berdedikasi penuh untuk memastikan pemulihan pasien berjalan optimal.</p>
-                            <p><strong class="text-gray-900">Adaptif:</strong> Saya akan menyesuaikan cara komunikasi dan pendampingan sesuai kebutuhan individu pasien.</p>
-                            <p><strong class="text-gray-900">Kolaboratif:</strong> Saya akan bekerja sama dengan perawat lain, tim medis, pasien, dan keluarga untuk keberhasilan mobilisasi dini.</p>
+                            <p><strong class="text-gray-900">Berorientasi Pelayanan:</strong> Saat *melakukan sosialisasi dan pendampingan*, saya akan memberikan edukasi yang jelas dan intensif untuk pasien dan keluarga.</p>
+                            <p><strong class="text-gray-900">Akuntabel:</strong> Ketika *melaksanakan program*, saya akan memastikan sesuai SOP dan standar yang ditetapkan.</p>
+                            <p><strong class="text-gray-900">Kompeten:</strong> Dalam *proses demonstrasi dan pendampingan*, saya akan menerapkan pengetahuan dan keterampilan dalam edukasi mobilisasi dini.</p>
+                            <p><strong class="text-gray-900">Harmonis:</strong> Selama *interaksi dengan pasien dan keluarga*, saya akan menciptakan suasana nyaman dan saling mendukung.</p>
+                            <p><strong class="text-gray-900">Loyal:</strong> Pada *setiap sesi edukasi dan pendampingan*, saya akan berdedikasi penuh untuk memastikan pemulihan pasien berjalan optimal.</p>
+                            <p><strong class="text-gray-900">Adaptif:</strong> Saat *berinteraksi dengan pasien*, saya akan menyesuaikan cara komunikasi dan pendampingan sesuai kebutuhan individu.</p>
+                            <p><strong class="text-gray-900">Kolaboratif:</strong> Dalam *seluruh implementasi program*, saya akan bekerja sama dengan perawat lain, tim medis, pasien, dan keluarga untuk keberhasilan mobilisasi dini.</p>
                         </td>
                         <td>Meningkatkan kepuasan pasien dan keluarga melalui pelayanan yang personal dan holistik, memperkuat citra positif organisasi.</td>
                         <td>Perawat Pelaksana, Pasien dan Keluarga</td>
